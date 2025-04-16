@@ -29,11 +29,11 @@
   },
   "scripts": {
     "cleanup": "rimraf dist",
-    "dev": "vite",
+    "dev": "node init && vite",
     "typecheck": "vue-tsc --noEmit",
-    "build:backend": "tsup",
-    "build:frontend": "vite build",
-    "build": "pnpm cleanup && pnpm run \"/^build:.*/\"",
+    "build:backend": "node init && tsup",
+    "build:frontend": "node init && vite build",
+    "build": "node init && pnpm cleanup && pnpm run \"/^build:.*/\"",
     "preview": "vite preview"
   },
   "peerDependencies": {
