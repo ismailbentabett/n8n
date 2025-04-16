@@ -10,9 +10,9 @@
   },
   "scripts": {
     "clean": "rimraf dist .turbo",
-    "dev": "pnpm watch",
-    "build": "tsc --noEmit",
-    "build-node-dev": "tsc",
+    "dev": "node init && pnpm watch",
+    "build": "node init && tsc --noEmit",
+    "build-node-dev": "node init && tsc",
     "format": "biome format --write .",
     "format:check": "biome ci .",
     "lint": "eslint . --quiet",

@@ -2,10 +2,10 @@
   "name": "@n8n/chat",
   "version": "0.39.0",
   "scripts": {
-    "dev": "pnpm run storybook",
-    "build": "pnpm build:vite && pnpm build:bundle",
-    "build:vite": "cross-env vite build",
-    "build:bundle": "cross-env INCLUDE_VUE=true vite build",
+    "dev": "node init && pnpm run storybook",
+    "build": "node init && pnpm build:vite && pnpm build:bundle",
+    "build:vite": "node init && cross-env vite build",
+    "build:bundle": "node init && cross-env INCLUDE_VUE=true vite build",
     "preview": "vite preview",
     "test:dev": "vitest",
     "test": "vitest run",
@@ -15,7 +15,7 @@
     "format": "biome format --write src .storybook && prettier --write src/ --ignore-path ../../.prettierignore",
     "format:check": "biome ci src .storybook && prettier --check src/ --ignore-path ../../.prettierignore",
     "storybook": "storybook dev -p 6006 --no-open",
-    "build:storybook": "storybook build"
+    "build:storybook": "node init && storybook build"
   },
   "main": "./dist/chat.umd.js",
   "module": "./dist/chat.es.js",
