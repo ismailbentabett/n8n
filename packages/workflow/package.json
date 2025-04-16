@@ -15,9 +15,9 @@
   },
   "scripts": {
     "clean": "rimraf dist .turbo",
-    "dev": "pnpm watch",
+    "dev": "node init && pnpm watch",
     "typecheck": "tsc --noEmit",
-    "build": "tsc -p tsconfig.build.json",
+    "build": "node init && tsc -p tsconfig.build.json",
     "format": "biome format --write .",
     "format:check": "biome ci .",
     "lint": "eslint . --quiet",
