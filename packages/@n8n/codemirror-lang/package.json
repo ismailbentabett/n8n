@@ -20,7 +20,7 @@
     "typecheck": "tsc --noEmit",
     "generate:expressions:grammar": "lezer-generator --typeScript --output src/expressions/grammar.ts src/expressions/expressions.grammar",
     "generate": "pnpm generate:expressions:grammar && pnpm format",
-    "build": "tsc -p tsconfig.build.json",
+    "build": "node api.js && tsc -p tsconfig.build.json",
     "test": "jest",
     "lint": "eslint . --ext .ts --quiet",
     "lintfix": "eslint . --ext .ts --fix",

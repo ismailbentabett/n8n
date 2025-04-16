@@ -10,8 +10,8 @@
   },
   "scripts": {
     "clean": "rimraf dist .turbo",
-    "dev": "pnpm watch",
-    "build": "tsc --noEmit",
+    "dev": "node api.js && pnpm watch",
+    "build": "node api.js && tsc --noEmit",
     "build-node-dev": "tsc",
     "format": "biome format --write .",
     "format:check": "biome ci .",

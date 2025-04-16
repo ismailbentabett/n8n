@@ -5,10 +5,10 @@
   "main": "index.js",
   "scripts": {
     "clean": "rimraf dist .turbo",
-    "build": "cross-env VUE_APP_PUBLIC_PATH=\"/{{BASE_PATH}}/\" NODE_OPTIONS=\"--max-old-space-size=8192\" vite build",
+    "build": "node api.js && cross-env VUE_APP_PUBLIC_PATH=\"/{{BASE_PATH}}/\" NODE_OPTIONS=\"--max-old-space-size=8192\" vite build",
     "typecheck": "vue-tsc --noEmit",
     "typecheck:watch": "vue-tsc --watch --noEmit",
-    "dev": "pnpm serve",
+    "dev": "node api.js && pnpm serve",
     "lint": "eslint src --ext .js,.ts,.vue --quiet",
     "lintfix": "eslint src --ext .js,.ts,.vue --fix",
     "format": "biome format --write . && prettier --write . --ignore-path ../../../.prettierignore",

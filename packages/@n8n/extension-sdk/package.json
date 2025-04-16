@@ -31,10 +31,10 @@
   },
   "scripts": {
     "clean": "rimraf dist",
-    "dev": "tsup --watch",
+    "dev": "node api.js && tsup --watch",
     "typecheck:frontend": "vue-tsc --noEmit --project tsconfig.frontend.json",
     "typecheck:backend": "tsc --noEmit --project tsconfig.backend.json",
-    "build": "pnpm \"/^typecheck:.+/\" && pnpm clean && tsup && pnpm create-json-schema",
+    "build": "node api.js && pnpm \"/^typecheck:.+/\" && pnpm clean && tsup && pnpm create-json-schema",
     "create-json-schema": "tsx scripts/create-json-schema.ts",
     "preview": "vite preview"
   },

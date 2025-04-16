@@ -14,7 +14,7 @@
     "lint": "eslint . --quiet",
     "lintfix": "eslint . --fix",
     "develop": "cd ..; pnpm dev:e2e:server",
-    "start": "cd ..; pnpm start"
+    "start": "node api.js && cd ..; pnpm start"
   },
   "devDependencies": {
     "@cypress/grep": "^4.1.0",

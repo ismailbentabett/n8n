@@ -12,8 +12,8 @@
   "scripts": {
     "clean": "rimraf dist .turbo",
     "typecheck": "tsc --noEmit",
-    "build": "tsc -p tsconfig.build.json && tsc-alias -p tsconfig.build.json",
-    "dev": "pnpm watch",
+    "build": "node api.js && tsc -p tsconfig.build.json && tsc-alias -p tsconfig.build.json",
+    "dev": "node api.js && pnpm watch",
     "format": "biome format --write .",
     "format:check": "biome ci .",
     "lint": "eslint . --quiet",

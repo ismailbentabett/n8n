@@ -4,9 +4,9 @@
   "main": "src/index.ts",
   "import": "src/index.ts",
   "scripts": {
-    "dev": "pnpm run storybook",
+    "dev": "node api.js && pnpm run storybook",
     "clean": "rimraf dist .turbo",
-    "build": "vite build",
+    "build": "node api.js && vite build",
     "typecheck": "vue-tsc --noEmit",
     "test": "vitest run",
     "test:dev": "vitest",
